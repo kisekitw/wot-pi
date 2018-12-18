@@ -18,5 +18,9 @@
     "msgpack5": "^4.2.1",
     "node-json2html": "^1.2.0",
     "ws": "^6.1.2"
+  },
+  "optionalDependencies": {
+    "onoff": "^3.2.2",
+    "node-dht-sensor": "^0.0.34"
   }
 }

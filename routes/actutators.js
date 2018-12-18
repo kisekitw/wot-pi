@@ -3,11 +3,15 @@ const router = express.Router();
 const resources = require('../resources/model');
 
 router.route('/').get((req, res, next) => {
-    res.status(200).send(resources.pi.actuators);
+    // res.status(200).send(resources.pi.actuators);
+    req.result = resources.pi.actuators;
+    next();
 });
 
 router.route('/leds').get((req, res, next) => {
-    res.status(200).send(resources.pi.leds);
+    // res.status(200).send(resources.pi.leds);
+    req.result = resources.pi.actuators.leds;
+    next();
 });
 
 router.route('/leds/:id').get((req, res, next) => {
